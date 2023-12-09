@@ -10,16 +10,16 @@ spec:
     - http:
         paths:
           - path: /authentication
-            pathType: Exact
+            pathType: Prefix
             backend:
               service:
-                name: auth-service
+                name: auth-service-service
                 port:
                   number: 8888
           - path: /devProductivity
-            pathType: Exact
+            pathType: Prefix
             backend:
               service:
-                name: productivity-service
+                name: productivity-service-service
                 port:
                   number: 9193
