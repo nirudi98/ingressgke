@@ -25,3 +25,10 @@ spec:
                 name: productivity-service-service
                 port:
                   number: 9193
+          - path: /devMetrics/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: metric-service-service
+                port:
+                  number: 9194
