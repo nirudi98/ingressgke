@@ -6,8 +6,11 @@ metadata:
     kubernetes.io/ingress.class: 'nginx'
     nginx.ingress.kubernetes.io/use-regex: 'true'
     nginx.ingress.kubernetes.io/rewrite-target: /$1
-    nginx.ingress.kubernetes.io/proxy-timeout: "3000s"
-    nginx.ingress.kubernetes.io/proxy-read-timeout: "3000s"
+    nginx.ingress.kubernetes.io/proxy-timeout: '7200'
+    nginx.ingress.kubernetes.io/proxy-read-timeout: '7200'
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: '7200'
+    nginx.ingress.kubernetes.io/proxy-send-timeout: '7200'
+    nginx.ingress.kubernetes.io/send-timeout: '7200'
 
 spec:
   rules:
