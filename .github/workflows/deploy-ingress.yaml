@@ -39,6 +39,6 @@ jobs:
         run: |
           gcloud container clusters get-credentials $GKE_CLUSTER --zone $GKE_ZONE
 
-      - name: Deploy Ingress
+      - name: Deploy Ingress Service
         run: |
           kubectl apply -f k8s/ingress.yaml
